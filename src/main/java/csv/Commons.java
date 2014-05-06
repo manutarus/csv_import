@@ -25,10 +25,10 @@ public class Commons {
 
 	public String formatDate(String sDate) {
         Format formatter;
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MM yyyy HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM dd yyy HH:mm:ss");
         try
         {
-            formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            formatter = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
             return formatter.format(simpleDateFormat.parse(sDate));
 
         }
@@ -49,7 +49,7 @@ public class Commons {
 	public String mysql() {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
-		return "-- phct patient table migration\n"
+		return "-- phct person table migration\n"
 				+ "--\n"
 				+ "-- ------------------------------------------------------\n"
 				+ "-- Date       "
@@ -62,7 +62,7 @@ public class Commons {
 				+ "/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n"
 				+ "/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n"
 				+ "/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n\n\n"
-				+ "--\n" + "-- file generated from patient csv\n" + "--\n\n";
+				+ "--\n" + "-- file generated from person csv\n" + "--\n\n";
 
 	}
 
